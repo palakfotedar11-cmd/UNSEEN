@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Unseen — Discover Connections</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <!-- LOGIN / SIGNUP SCREEN -->
+<div id="authScreen" class="auth-screen">
+
+    <div class="auth-card">
+
+        <div class="auth-logo">UNSEEN</div>
+
+        <p class="auth-tagline">
+            Discover the people you didn't know you needed.
+        </p>
+
+        <!-- LOGIN -->
+        <div id="loginBox">
+
+            <h1>Welcome Back</h1>
+            <p class="auth-subtitle">Login to continue to UNSEEN</p>
+
+            <input
+                type="text"
+                id="loginUsername"
+                placeholder="Username"
+                autocomplete="username"
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                autocomplete="current-password"
+            >
+
+            <button id="loginButton" class="auth-button">
+                Login
+            </button>
+
+            <p id="loginError" class="auth-error"></p>
+
+            <p class="switch-text">
+                Don't have an account?
+                <button id="showSignup" class="switch-button">
+                    Sign Up
+                </button>
+            </p>
+
+        </div>
+
+
+        <!-- SIGN UP -->
+        <div id="signupBox" style="display:none;">
+
+            <h1>Create Account</h1>
+            <p class="auth-subtitle">Join the UNSEEN campus network</p>
+
+            <input
+                type="text"
+                id="signupUsername"
+                placeholder="Choose a username"
+                autocomplete="username"
+            >
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create password"
+                autocomplete="new-password"
+            >
+
+            <input
+                type="password"
+                id="signupConfirmPassword"
+                placeholder="Confirm password"
+                autocomplete="new-password"
+            >
+
+            <button id="signupButton" class="auth-button">
+                Create Account
+            </button>
+
+            <p id="signupError" class="auth-error"></p>
+
+            <p class="switch-text">
+                Already have an account?
+                <button id="showLogin" class="switch-button">
+                    Login
+                </button>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- YOUR EXISTING UNSEEN WEBSITE -->
+<div id="mainUnseenContent" style="display:none;">
+
+    <!-- YAHAN TUMHARA EXISTING UNSEEN KA POORA CODE RAHEGA -->
+
+
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+
+        <div class="logo">
+            Unseen
+        </div>
+
+        <nav>
+            <a href="#about">How it works</a>
+            <a href="#communities">Communities</a>
+            <a href="#gdg">GDG × Unseen</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="about">
+
+    <div class="hero-content">
+
+        <div class="sparkle">
+            ✦ ✧ ✦
+        </div>
+
+        <h1>
+            Discover the people<br>
+            <span>you didn't know you needed.</span>
+        </h1>
+
+        <p>
+            Unseen helps students discover people,
+            communities and opportunities based on
+            shared interests.
+        </p>
+
+        <a href="#step1" class="btn btn-primary">
+            Find My Matches →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 01 — STUDENT PROFILE -->
+<section class="step-section" id="step1">
+
+    <div class="container">
+
+        <div class="step-label">
+            STEP 01
+        </div>
+
+        <div class="section-title">
+            Tell us about yourself
+        </div>
+
+        <p class="section-subtitle">
+            Tell us a little about yourself so Unseen
+            can find better connections for you.
+        </p>
+
+
+        <div class="profile-card">
+
+            <!-- NAME -->
+            <div class="input-group">
+
+                <label for="name">
+                    Your name
+                    <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="input-group">
+
+                <label for="email">
+                    Email ID
+                    <span class="required">*</span>
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your college email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- ROLL NUMBER -->
+            <div class="input-group">
+
+                <label for="rollNo">
+                    Roll No.
+                    <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="rollNo"
+                    placeholder="Enter your roll number"
+                    required
+                >
+
+            </div>
+
+
+            <!-- BRANCH -->
+            <div class="input-group">
+
+                <label for="branch">
+                    Branch
+                    <span class="required">*</span>
+                </label>
+
+                <select id="branch" required>
+
+                    <option value="" disabled selected>
+                        Select your branch
+                    </option>
+
+                    <option value="CSE">
+                        Computer Science & Engineering
+                    </option>
+
+                    <option value="ECE">
+                        Electronics & Communication Engineering
+                    </option>
+
+                    <option value="IT">
+                        Information Technology
+                    </option>
+
+                    <option value="Mechanical">
+                        Mechanical Engineering
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- YEAR -->
+            <div class="input-group">
+
+                <label for="year">
+                    Year
+                    <span class="required">*</span>
+                </label>
+
+                <select id="year" required>
+
+                    <option value="" disabled selected>
+                        Select your year
+                    </option>
+
+                    <option value="1st Year">
+                        1st Year
+                    </option>
+
+                    <option value="2nd Year">
+                        2nd Year
+                    </option>
+
+                    <option value="3rd Year">
+                        3rd Year
+                    </option>
+
+                    <option value="4th Year">
+                        4th Year
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- INTERESTS -->
+            <div class="interest-section">
+
+                <h3>
+                    Your interests
+                    <span class="required">*</span>
+                </h3>
+
+                <p class="interest-helper">
+                    Select one or more interests.
+                </p>
+
+                <div class="interest-grid">
+
+                    <button class="interest" type="button">
+                        AI / ML
+                    </button>
+
+                    <button class="interest" type="button">
+                        Web Development
+                    </button>
+
+                    <button class="interest" type="button">
+                        Photography
+                    </button>
+
+                    <button class="interest" type="button">
+                        Music
+                    </button>
+
+                    <button class="interest" type="button">
+                        Dance
+                    </button>
+
+                    <button class="interest" type="button">
+                        Writing
+                    </button>
+
+                    <button class="interest" type="button">
+                        Startups
+                    </button>
+
+                    <button class="interest" type="button">
+                        Hackathons
+                    </button>
+
+                    <button class="interest" type="button">
+                        Gaming
+                    </button>
+
+                    <button class="interest" type="button">
+                        Robotics
+                    </button>
+
+                    <button class="interest" type="button">
+                        Sports
+                    </button>
+
+                    <button class="interest" type="button">
+                        Public Speaking
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FIND MATCHES -->
+            <div class="match-button">
+
+                <button
+                    class="btn btn-primary"
+                    type="button"
+                >
+                    Find My Matches →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 02 — MATCHES -->
+<section class="matches-section">
+
+    <div class="container">
+
+        <div class="step-label">
+            STEP 02
+        </div>
+
+        <h2 class="section-title">
+            People you might connect with
+        </h2>
+
+        <p class="section-subtitle">
+            Unseen found students who share
+            your interests.
+        </p>
+
+        <div class="match-placeholder">
+
+            <div class="match-icon">
+                ✨
+            </div>
+
+            <h3>
+                Your matches will appear here
+            </h3>
+
+            <p>
+                Students with similar interests,
+                goals and passions will be shown here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 03 — COMMUNITIES -->
+<section
+    class="communities-section"
+    id="communities"
+>
+
+    <div class="container">
+
+        <div class="step-label">
+            STEP 03
+        </div>
+
+        <h2 class="section-title">
+            Discover communities
+        </h2>
+
+        <p class="section-subtitle">
+            Find groups built around shared interests.
+        </p>
+
+
+        <div class="community-grid">
+
+            <!-- AI -->
+            <div class="community-card">
+
+                <div class="community-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI & Machine Learning
+                </h3>
+
+                <div class="student-count">
+                    42 students
+                </div>
+
+                <p>
+                    Students exploring AI,
+                    machine learning,
+                    Generative AI and research.
+                </p>
+
+                <button class="community-button">
+                    Join Community →
+                </button>
+
+            </div>
+
+
+            <!-- HACKATHON -->
+            <div class="community-card">
+
+                <div class="community-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Hackathon Hunters
+                </h3>
+
+                <div class="student-count">
+                    31 students
+                </div>
+
+                <p>
+                    Find teammates, build projects
+                    and participate in hackathons.
+                </p>
+
+                <button class="community-button">
+                    Join Community →
+                </button>
+
+            </div>
+
+
+            <!-- CREATORS -->
+            <div class="community-card">
+
+                <div class="community-icon">
+                    📸
+                </div>
+
+                <h3>
+                    Campus Creators
+                </h3>
+
+                <div class="student-count">
+                    24 students
+                </div>
+
+                <p>
+                    Photography, filmmaking,
+                    design and creative projects.
+                </p>
+
+                <button class="community-button">
+                    Join Community →
+                </button>
+
+            </div>
+
+
+            <!-- STARTUPS -->
+            <div class="community-card">
+
+                <div class="community-icon">
+                    💡
+                </div>
+
+                <h3>
+                    Student Founders
+                </h3>
+
+                <div class="student-count">
+                    18 students
+                </div>
+
+                <p>
+                    Students interested in startups,
+                    entrepreneurship and new ideas.
+                </p>
+
+                <button class="community-button">
+                    Join Community →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STEP 04 — GDG × UNSEEN -->
+<section
+    class="gdg-section"
+    id="gdg"
+>
+
+    <div class="container">
+
+        <!-- HEADING -->
+        <div class="gdg-heading">
+
+            <div class="step-label">
+                STEP 04
+            </div>
+
+            <div class="gdg-label">
+                GDG × UNSEEN
+            </div>
+
+            <h2>
+                Let students decide
+                <span>what comes next.</span>
+            </h2>
+
+            <p>
+                Unseen collects student interests
+                and turns them into a campus technology
+                pulse that GDG organizers can use to
+                plan relevant events.
+            </p>
+
+        </div>
+
+
+        <!-- STUDENT INTEREST INPUT -->
+        <div class="gdg-pulse-card">
+
+            <!-- LEFT -->
+            <div class="gdg-pulse-info">
+
+                <div class="gdg-mini-label">
+                    STUDENT VOICE
+                </div>
+
+                <h3>
+                    What should GDG
+                    <span>organize?</span>
+                </h3>
+
+                <p>
+                    Tell GDG what you would actually
+                    like to see on campus. Select one
+                    or more options.
+                </p>
+
+                <div class="gdg-live-status">
+
+                    <span class="gdg-live-dot"></span>
+
+                    Student responses update
+                    the campus pulse
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="gdg-interest-selector">
+
+                <div class="gdg-map-header">
+
+                    <span>
+                        YOUR INTERESTS
+                    </span>
+
+                    <span class="gdg-signal">
+                        STUDENT INPUT
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="gdg-option"
+                    data-gdg-interest="AI / ML Workshop"
+                    type="button"
+                >
+                    <span>
+                        AI / ML Workshop
+                    </span>
+
+                    <span>
+                        +
+                    </span>
+                </button>
+
+
+                <button
+                    class="gdg-option"
+                    data-gdg-interest="Web Development"
+                    type="button"
+                >
+                    <span>
+                        Web Development
+                    </span>
+
+                    <span>
+                        +
+                    </span>
+                </button>
+
+
+                <button
+                    class="gdg-option"
+                    data-gdg-interest="Generative AI"
+                    type="button"
+                >
+                    <span>
+                        Generative AI / LLMs
+                    </span>
+
+                    <span>
+                        +
+                    </span>
+                </button>
+
+
+                <button
+                    class="gdg-option"
+                    data-gdg-interest="Cloud"
+                    type="button"
+                >
+                    <span>
+                        Cloud Computing
+                    </span>
+
+                    <span>
+                        +
+                    </span>
+                </button>
+
+
+                <button
+                    class="gdg-option"
+                    data-gdg-interest="Android"
+                    type="button"
+                >
+                    <span>
+                        Android Development
+                    </span>
+
+                    <span>
+                        +
+                    </span>
+                </button>
+
+
+                <button
+                    class="gdg-option"
+                    data-gdg-interest="Hackathon"
+                    type="button"
+                >
+                    <span>
+                        Hackathon
+                    </span>
+
+                    <span>
+                        +
+                    </span>
+                </button>
+
+
+                <button
+                    class="btn btn-primary gdg-submit-interest"
+                    type="button"
+                >
+                    Submit My Interest →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAMPUS TECH PULSE -->
+        <div class="gdg-campus-pulse">
+
+            <div class="gdg-pulse-title">
+
+                <div>
+
+                    <div class="gdg-mini-label">
+                        CAMPUS TECH PULSE
+                    </div>
+
+                    <h3>
+                        What students want
+                    </h3>
+
+                </div>
+
+                <div class="gdg-response-count">
+
+                    <span id="gdgTotalResponses">
+                        0
+                    </span>
+
+                    responses
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="gdg-stats"
+                id="gdgStats"
+            >
+            </div>
+
+        </div>
+
+
+        <!-- UPCOMING GDG EVENT -->
+        <div class="gdg-upcoming-event">
+
+            <div class="gdg-event-top">
+
+                <div class="gdg-mini-label">
+                    UPCOMING ON CAMPUS
+                </div>
+
+                <div class="gdg-event-status">
+                    REGISTRATION OPEN
+                </div>
+
+            </div>
+
+
+            <div class="gdg-event-content">
+
+                <!-- EVENT INFORMATION -->
+                <div class="gdg-event-main">
+
+                    <h3>
+                        GDG AI Build Night
+                    </h3>
+
+                    <p>
+                        A hands-on campus session where
+                        students explore Artificial Intelligence,
+                        Generative AI and build a small
+                        AI-powered project with fellow students.
+                    </p>
+
+
+                    <div class="gdg-event-tags">
+
+                        <span>
+                            AI / ML
+                        </span>
+
+                        <span>
+                            Generative AI
+                        </span>
+
+                        <span>
+                            Hands-on
+                        </span>
+
+                        <span>
+                            Networking
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EVENT DETAILS -->
+                <div class="gdg-event-details">
+
+                    <div>
+
+                        <span>
+                            DATE
+                        </span>
+
+                        <strong>
+                            20 September 2026
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            TIME
+                        </span>
+
+                        <strong>
+                            2:00 PM – 5:00 PM
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            VENUE
+                        </span>
+
+                        <strong>
+                            PUSSGRC Campus
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- REGISTER -->
+            <button
+                class="btn btn-primary gdg-register-button"
+                type="button"
+            >
+                Register for Event →
+            </button>
+
+
+            <!-- SUCCESS -->
+            <div
+                class="gdg-registration-success"
+                id="gdgRegistrationSuccess"
+            >
+                ✓ You are registered for
+                GDG AI Build Night.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="footer-logo">
+            Unseen
+        </div>
+
+        <p>
+            Discover connections hiding in plain sight.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 Unseen
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+```
+</div>
+</body>
+
+</html>
+
