@@ -1,10 +1,12 @@
 require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 const { GoogleGenAI } = require("@google/genai");
 
 const app = express();
-const PORT = 3000;
+
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static(__dirname));
@@ -79,6 +81,6 @@ Rules:
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`UNSEEN running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`UNSEEN running on port ${PORT}`);
 });
